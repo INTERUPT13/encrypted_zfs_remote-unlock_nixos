@@ -28,8 +28,18 @@ mount /dev/sda1 /mnt/boot
 # swapon /dev/sda2  # TODO when doing this you will have unecrypted swap -> leak ram. TODO swap in zfs
 ```
 
+### notice:
+if you donit already have a hardware configuration or don't want to make one yourself
+mount all your stuff and then run 
 ```bash
 nixos-generate-config --root /mnt
+```
+or whatever
+
+```bash
+nix-shell -p git
+git clone "https://github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos" /mnt/etc/nixos/
+nixos-install --flake /mnt/etc/nixos#nixos
 ```
 
 
