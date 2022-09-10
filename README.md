@@ -36,6 +36,16 @@ nixos-generate-config --root /mnt
 ```
 or whatever
 
+
+setup ssh keys, if you want both rsa and ed it might look like this
+```bash
+ssh-keygen -t ed25519
+ssh-keygen -t rsa
+
+cp /root/.ssh/id_rsa /mnt/root/initrd_ssh_host_key
+cp /root/.ssh/id_ed25519 /mnt/root/initrd_ssh_host_key_ed
+```
+
 ```bash
 nix-shell -p git
 git clone "https://github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos" /mnt/etc/nixos/
