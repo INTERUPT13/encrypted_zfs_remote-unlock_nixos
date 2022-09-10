@@ -1,0 +1,40 @@
+{...}@inputs: {
+
+  #... my settings
+
+  boot.initrd.network.enable = true;
+
+  boot .initrd.network = {
+      ssh = {
+        enable = true;
+        port = 1234; # TODO set your port would use sth thats not 22 so the signature mismatch
+	# wont piss you off
+        # for initrd
+	# you need either rsa or epi curve. You can have both or even more keys I guess (not tested)
+        hostKeys = [ "/root/keylocation_rsa" "/root/keylocation_ec" ];
+        authorizedKeys = [ "ssh-rsa AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA user@machine" ];
+
+      };
+      postCommands = ''
+           cat <<EOF > /root/.profile
+           if pgrep -x "zfs" > /dev/null
+           then
+             zfs load-key -a
+             killall zfs
+           else
+             echo "zfs not running -- maybe the pool is taking some time to load for some unforseen reason."
+           fi
+           EOF
+           ip r del default
+           ip r add default via 1.2.3.4
+      '';
+      #                         ^^^^^^^
+      #             we have to delete and overwrite the route if the initrds dhcpcd fails to get the correct route.
+      # I experienced this problem with hetzner for example, maybe there is a cleaner way to do it just create a pull request
+      # it shouldn't be reqiured in some sort of LAN (e.g no Gateways)
+    
+  };
+
+  # changeme (zfs needs this option) via head -c 8 /etc/machine-id
+  networking.hostId = "aaaaaaaa"; # 4 byte hex id sequence (should be unique I think zfs needs it for nfs even if you disabled nfs)
+}
