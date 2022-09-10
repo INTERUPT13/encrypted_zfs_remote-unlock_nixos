@@ -1,0 +1,61 @@
+{
+  "nodes": {
+    "hardware-cfg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662813706,
+        "narHash": "sha256-HVPYOs8Qm7oZWZI0rZu7syco/dcy1sODYzW+EvxgvLY=",
+        "ref": "refs/heads/master",
+        "rev": "51f3e2a4e18c1bf28da1e67dcf72e3bf36a04159",
+        "revCount": 3,
+        "type": "git",
+        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_hardware.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_hardware.git"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1662019588,
+        "narHash": "sha256-oPEjHKGGVbBXqwwL+UjsveJzghWiWV0n9ogo1X6l4cw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2da64a81275b68fdad38af669afeda43d401e94b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "hardware-cfg": "hardware-cfg",
+        "nixpkgs": "nixpkgs",
+        "security-cfg": "security-cfg"
+      }
+    },
+    "security-cfg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662812977,
+        "narHash": "sha256-+9+G0KoIIff/KhxfuQva+iOyBBdz9uroy+J+LkthF9I=",
+        "ref": "refs/heads/master",
+        "rev": "f75d23cfc2cd47f84fb943c92833069887626c77",
+        "revCount": 10,
+        "type": "git",
+        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
