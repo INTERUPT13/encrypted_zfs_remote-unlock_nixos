@@ -16,6 +16,22 @@
         "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_hardware.git"
       }
     },
+    "home-manager-module": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662890293,
+        "narHash": "sha256-c/D0j5oF0U3t2TpI6jPaXBUSlJLGB2/0GaxPJiYn9wc=",
+        "ref": "refs/heads/master",
+        "rev": "2260c226a5f31e1c7202297ded006452717ecfbf",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/INTERUPT13/nixos-home-manager-module.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/INTERUPT13/nixos-home-manager-module.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1662019588,
@@ -35,6 +51,7 @@
     "root": {
       "inputs": {
         "hardware-cfg": "hardware-cfg",
+        "home-manager-module": "home-manager-module",
         "nixpkgs": "nixpkgs",
         "security-cfg": "security-cfg"
       }
