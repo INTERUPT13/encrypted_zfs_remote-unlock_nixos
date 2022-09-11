@@ -14,9 +14,14 @@
       flake = false;
     };
 
+    home-manager-module = {
+      url = "git+ssh://git@github.com:INTERUPT13/nixos-home-manager-module.git";
+      flake = false;
+    };
+
   };
 
-  outputs = { self, nixpkgs, security-cfg, hardware-cfg}@attrs: with nixpkgs; let
+  outputs = { self, nixpkgs, security-cfg, hardware-cfg, home-manager-module}@attrs: with nixpkgs; let
     # todo splitin modules
     pub_cfg = {config, pkgs, ...}: {
       system.stateVersion = "22.05";
@@ -49,7 +54,7 @@
       # to pass flake inputs to modules if needed
       modules = [ 
         pub_cfg
-        
+        (import "${home-manager-module}"/general.nix")
         # EXAMPLE FOUND IN ./security.nix.example
         # security relevant stuff. I wont share my actual config but just think of it
         # as a bunch of firewall,selinux whatever settings
