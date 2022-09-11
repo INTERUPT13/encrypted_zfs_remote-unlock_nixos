@@ -14,14 +14,21 @@
       flake = false;
     };
 
-    home-manager-module = {
-      url = "git+ssh://git@github.com/INTERUPT13/nixos-home-manager-module.git";
-      flake = false;
+    home-manager = {
+      url = "github:nix-community/home-manager";
     };
+
+
+    home-manager-cfg-public = {
+      url = "git+ssh://git@github.com/INTERUPT13/nix-home-manager-config-public.git";
+      type = "git";
+      #ref = "testing";
+    };
+
 
   };
 
-  outputs = { self, nixpkgs, security-cfg, hardware-cfg, home-manager-module}@attrs: with nixpkgs; let
+  outputs = { self, nixpkgs, security-cfg, hardware-cfg, home-manager,  home-manager-cfg-public}@attrs: with nixpkgs; let
     # todo splitin modules
     pub_cfg = {config, pkgs, ...}: {
       nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -40,6 +47,11 @@
         mosh
       ];
 
+      users.users.flandre = {
+        name = "flandre";
+	isNormalUser = true;
+      };
+
       services.openssh.enable = true;
       # TODO cert only
       services.openssh.permitRootLogin = "yes";
@@ -56,7 +68,14 @@
       # to pass flake inputs to modules if needed
       modules = [ 
         pub_cfg
-        #(import "${home-manager-module}/general.nix")
+	#home-manager.nixosModules.home-manager (home-manager-cfg-public.cfg)
+	home-manager.nixosModules.home-manager ({
+	  home-manager.users.flandre = home-manager-cfg-public.default_cfg;
+	  home-manager.users.root = home-manager-cfg-public.default_cfg;
+	})
+
+
+
         # EXAMPLE FOUND IN ./security.nix.example
         # security relevant stuff. I wont share my actual config but just think of it
         # as a bunch of firewall,selinux whatever settings
