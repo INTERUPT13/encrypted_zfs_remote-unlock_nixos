@@ -42,6 +42,7 @@ setup ssh keys, if you want both rsa and ed it might look like this
 ssh-keygen -t ed25519
 ssh-keygen -t rsa
 
+mkdir /mnt/root/
 cp /root/.ssh/id_rsa /mnt/root/initrd_ssh_host_key
 cp /root/.ssh/id_ed25519 /mnt/root/initrd_ssh_host_key_ed
 ```
