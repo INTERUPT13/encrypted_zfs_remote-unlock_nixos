@@ -6,6 +6,8 @@
     security-cfg = { 
       url = "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git";
       flake = false;
+      type = "git";
+      ref = "uefi";
     };
     # optional you can also use a ./security.cfg in your /etc/nixos/ folder (see below)
     # but i go with a priv git repo flake
@@ -35,22 +37,40 @@
 
       system.stateVersion = "22.05";
 
-      boot.loader.grub.enable = true;
-      boot.loader.grub.version = 2;
+      boot.loader = {
+       grub.enable = true;
+       grub.version = 2;
+       grub.device = "nodev";
+      };
+
       services.zfs.autoScrub.enable = true;
 
       # TODO services.sanoid for auto snapshots
       #on desktop maybe set os prober -> multiboot for winshit
-      boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+      #boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
       environment.systemPackages = with pkgs; [
         mosh
+
       ];
+
+      programs.sway = {
+        enable=true;
+      };
 
       users.users.flandre = {
         name = "flandre";
 	isNormalUser = true;
       };
+
+      sound.enable = true;
+      boot.extraModprobeConfig = ''
+  options snd slots=snd-hda-intel
+'';
+
+
+hardware.pulseaudio.enable = true;
+hardware.pulseaudio.support32Bit = true;
 
       services.openssh.enable = true;
       # TODO cert only
@@ -81,7 +101,8 @@
         # as a bunch of firewall,selinux whatever settings
         #./security.nix
         (import "${security-cfg}/security-modules.nix")
-        (import "${hardware-cfg}/hardware-modules.nix")
+        #(import "${hardware-cfg}/hardware-modules.nix")
+        (import ./hardware-configuration.nix)
         # ^ using my own priv repos but you can just put it in your /etc/nixos
         # and source via ./<file>.nix TODO guide on how to generate hardware-configuration.nix
       ];

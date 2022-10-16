@@ -53,11 +53,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1662759269,
-        "narHash": "sha256-lt8bAfEZudCQb+MxoNKmenhMTXhu3RCCyLYxU9t5FFk=",
+        "lastModified": 1665863351,
+        "narHash": "sha256-u8YWmHBTXWvQPBfKOrPWFVjvqhJ+5hUk3/29eR7APko=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "9f7fe353b613d0e45d7a5cdbd1f13c96c15803dd",
+        "rev": "2ecb3ea990cf737cfb42d8cd805fa86347c1afaf",
         "type": "github"
       },
       "original": {
@@ -76,11 +76,11 @@
         "zsh-colored-man-pages": "zsh-colored-man-pages"
       },
       "locked": {
-        "lastModified": 1662925504,
-        "narHash": "sha256-GPE3itbiHAhE6saVmfMDNh8GSJ1WpKTpsAtki4Ks/Tg=",
+        "lastModified": 1662974416,
+        "narHash": "sha256-I3iBsw//fVuY2tg2ubK37DoE/7AgJ+CLp0j6nNg6mp0=",
         "ref": "refs/heads/master",
-        "rev": "e7527c676230d15f5ac25e74a6903c9a8fb106db",
-        "revCount": 12,
+        "rev": "b3a3c8c5f4b10d4c8aa9aba4d2bbaa9f2074e583",
+        "revCount": 16,
         "type": "git",
         "url": "git+ssh://git@github.com/INTERUPT13/nix-home-manager-config-public.git"
       },
@@ -120,7 +120,7 @@
       "locked": {
         "lastModified": 1649318490,
         "narHash": "sha256-t+g7N8RAC5XSk8bFrertfIZ2/5ASzOvcUpN5uLZc2DQ=",
-        "ref": "refs/heads/master",
+        "ref": "master",
         "rev": "cb49f929ab727ec858670ee6bfc81c49ff5e56b8",
         "revCount": 202,
         "type": "git",
@@ -133,11 +133,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1654953433,
-        "narHash": "sha256-TwEeh4r50NdWHFAHQSyjCk2cZxgwUfcCCAJOhPdXB28=",
+        "lastModified": 1662996720,
+        "narHash": "sha256-XvLQ3SuXnDMJMpM1sv1ifPjBuRytiDYhB12H/BNTjgY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "90cd5459a1fd707819b9a3fb9c852beaaac3b79a",
+        "rev": "5f326e2a403e1cebaec378e72ceaf5725983376d",
         "type": "github"
       },
       "original": {
@@ -181,11 +181,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1662821606,
-        "narHash": "sha256-Z9z9iSH+tgJ0iyRcBfEQRwELgjnhpVXsktiWiFe3SuY=",
+        "lastModified": 1665732960,
+        "narHash": "sha256-WBZ+uSHKFyjvd0w4inbm0cNExYTn8lpYFcHEes8tmec=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "93a0067a9c85c17764f7755947e6ecf52dc47d8a",
+        "rev": "4428e23312933a196724da2df7ab78eb5e67a88e",
         "type": "github"
       },
       "original": {
@@ -207,26 +207,27 @@
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1662812977,
-        "narHash": "sha256-+9+G0KoIIff/KhxfuQva+iOyBBdz9uroy+J+LkthF9I=",
-        "ref": "refs/heads/master",
-        "rev": "f75d23cfc2cd47f84fb943c92833069887626c77",
-        "revCount": 10,
+        "lastModified": 1664368668,
+        "narHash": "sha256-b5rCfmcmDMwTO2V2dHU0uGUUNyRgpt92DAu20Ivd1Z0=",
+        "ref": "uefi",
+        "rev": "725589270c5bf949e91a5c537cf2f1b6e34795c5",
+        "revCount": 14,
         "type": "git",
-        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
+        "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
       },
       "original": {
+        "ref": "uefi",
         "type": "git",
-        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
+        "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
       }
     },
     "utils": {
       "locked": {
-        "lastModified": 1653893745,
-        "narHash": "sha256-0jntwV3Z8//YwuOjzhV2sgJJPt+HY6KhU7VZUL0fKZQ=",
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "1ed9fb1935d260de5fe1c2f7ee0ebaae17ed2fa1",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
         "type": "github"
       },
       "original": {
@@ -255,7 +256,7 @@
       "locked": {
         "lastModified": 1622844304,
         "narHash": "sha256-KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=",
-        "ref": "refs/heads/master",
+        "ref": "master",
         "rev": "a411ef3e0992d4839f0732ebeb9823024afaaaa8",
         "revCount": 530,
         "type": "git",
@@ -271,7 +272,7 @@
       "locked": {
         "lastModified": 1656101815,
         "narHash": "sha256-BaYYzl6JArfPWASJtzk44scGejwgyT5+W94ugVDCV3I=",
-        "ref": "refs/heads/master",
+        "ref": "master",
         "rev": "7fbd15150fe0fc84a34b6aa9e31c5589de3c9ffc",
         "revCount": 34,
         "type": "git",
@@ -287,7 +288,7 @@
       "locked": {
         "lastModified": 1554205411,
         "narHash": "sha256-087bNmB5gDUKoSriHIjXOVZiUG5+Dy9qv3D69E8GBhs=",
-        "ref": "refs/heads/master",
+        "ref": "master",
         "rev": "57bdda68e52a09075352b18fa3ca21abd31df4cb",
         "revCount": 9,
         "type": "git",
