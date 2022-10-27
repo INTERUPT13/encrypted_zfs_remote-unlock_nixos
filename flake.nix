@@ -37,21 +37,13 @@
 
       system.stateVersion = "22.05";
 
-      boot.loader = {
-       grub.enable = true;
-       grub.version = 2;
-       grub.device = "nodev";
-      };
 
       services.zfs.autoScrub.enable = true;
 
       # TODO services.sanoid for auto snapshots
-      #on desktop maybe set os prober -> multiboot for winshit
-      #boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
       environment.systemPackages = with pkgs; [
         mosh
-
       ];
 
       programs.sway = {
@@ -88,6 +80,11 @@ hardware.pulseaudio.support32Bit = true;
       # to pass flake inputs to modules if needed
       modules = [ 
         pub_cfg
+
+        # bootloader specs/mechanism
+        #(import ./bootloader/grub2_efi.nix)
+        (import ./bootloader/systemdboot_bios.nix)
+
 	#home-manager.nixosModules.home-manager (home-manager-cfg-public.cfg)
 	home-manager.nixosModules.home-manager ({
 	  home-manager.users.flandre = home-manager-cfg-public.default_cfg;
