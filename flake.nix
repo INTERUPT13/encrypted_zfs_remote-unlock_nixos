@@ -7,7 +7,7 @@
       url = "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git";
       flake = false;
       type = "git";
-      ref = "uefi";
+      #ref = "uefi";
     };
     # optional you can also use a ./security.cfg in your /etc/nixos/ folder (see below)
     # but i go with a priv git repo flake
@@ -97,7 +97,13 @@ hardware.pulseaudio.support32Bit = true;
         # security relevant stuff. I wont share my actual config but just think of it
         # as a bunch of firewall,selinux whatever settings
         #./security.nix
-        (import "${security-cfg}/security-modules.nix")
+        #(import "${security-cfg}/security-modules.nix")
+
+        (import "${security-cfg}/fw/defconfig.nix")
+        (import "${security-cfg}/initrd/zfs_remote_unlock.nix")
+        (import "${security-cfg}/sshd/defconfig.nix")
+
+
         #(import "${hardware-cfg}/hardware-modules.nix")
         (import ./hardware-configuration.nix)
         # ^ using my own priv repos but you can just put it in your /etc/nixos

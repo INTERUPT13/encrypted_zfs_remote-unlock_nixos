@@ -207,16 +207,15 @@
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1664368668,
-        "narHash": "sha256-b5rCfmcmDMwTO2V2dHU0uGUUNyRgpt92DAu20Ivd1Z0=",
-        "ref": "uefi",
-        "rev": "725589270c5bf949e91a5c537cf2f1b6e34795c5",
+        "lastModified": 1668846798,
+        "narHash": "sha256-+JV5KCGov0h814bUnbiuT6tIsHMzdil2hCvHsGOzJ00=",
+        "ref": "refs/heads/master",
+        "rev": "2c0ee2f5b27f9df6d67c0ce17c803494b92dfe3c",
         "revCount": 14,
         "type": "git",
         "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
       },
       "original": {
-        "ref": "uefi",
         "type": "git",
         "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
       }
