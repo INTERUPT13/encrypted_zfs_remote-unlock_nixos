@@ -9,12 +9,6 @@
       type = "git";
       #ref = "uefi";
     };
-    # optional you can also use a ./security.cfg in your /etc/nixos/ folder (see below)
-    # but i go with a priv git repo flake
-    hardware-cfg = { 
-      url = "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_hardware.git";
-      flake = false;
-    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -30,7 +24,7 @@
 
   };
 
-  outputs = { self, nixpkgs, security-cfg, hardware-cfg, home-manager,  home-manager-cfg-public}@attrs: with nixpkgs; let
+  outputs = { self, nixpkgs, security-cfg, home-manager,  home-manager-cfg-public}@attrs: with nixpkgs; let
     # todo splitin modules
     pub_cfg = {config, pkgs, ...}: {
       nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -103,9 +97,10 @@ hardware.pulseaudio.support32Bit = true;
         (import "${security-cfg}/initrd/zfs_remote_unlock.nix")
         (import "${security-cfg}/sshd/defconfig.nix")
 
+        (import "${security-cfg}/hw/hardware-configuration-hetzner_01.nix")
+
 
         #(import "${hardware-cfg}/hardware-modules.nix")
-        (import ./hardware-configuration.nix)
         # ^ using my own priv repos but you can just put it in your /etc/nixos
         # and source via ./<file>.nix TODO guide on how to generate hardware-configuration.nix
       ];

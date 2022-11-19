@@ -31,33 +31,17 @@
         "type": "github"
       }
     },
-    "hardware-cfg": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1662813706,
-        "narHash": "sha256-HVPYOs8Qm7oZWZI0rZu7syco/dcy1sODYzW+EvxgvLY=",
-        "ref": "refs/heads/master",
-        "rev": "51f3e2a4e18c1bf28da1e67dcf72e3bf36a04159",
-        "revCount": 3,
-        "type": "git",
-        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_hardware.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_hardware.git"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": "nixpkgs",
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1665863351,
-        "narHash": "sha256-u8YWmHBTXWvQPBfKOrPWFVjvqhJ+5hUk3/29eR7APko=",
+        "lastModified": 1668788863,
+        "narHash": "sha256-FsdUG+YkRX7JZKZm6T44J2h+0pXB1sWA9AobyiozFK0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2ecb3ea990cf737cfb42d8cd805fa86347c1afaf",
+        "rev": "948d1f8a5cef55a281d4f5d17f3b79df6c82fce1",
         "type": "github"
       },
       "original": {
@@ -76,11 +60,11 @@
         "zsh-colored-man-pages": "zsh-colored-man-pages"
       },
       "locked": {
-        "lastModified": 1662974416,
-        "narHash": "sha256-I3iBsw//fVuY2tg2ubK37DoE/7AgJ+CLp0j6nNg6mp0=",
+        "lastModified": 1667546055,
+        "narHash": "sha256-TeaZAvhbRCvfA1WrbrUI/YMW/s2sB9ZiaFhW51E494k=",
         "ref": "refs/heads/master",
-        "rev": "b3a3c8c5f4b10d4c8aa9aba4d2bbaa9f2074e583",
-        "revCount": 16,
+        "rev": "5c429c710a9319d38fbf3ae8575221b3731306df",
+        "revCount": 18,
         "type": "git",
         "url": "git+ssh://git@github.com/INTERUPT13/nix-home-manager-config-public.git"
       },
@@ -133,11 +117,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1662996720,
-        "narHash": "sha256-XvLQ3SuXnDMJMpM1sv1ifPjBuRytiDYhB12H/BNTjgY=",
+        "lastModified": 1667629849,
+        "narHash": "sha256-P+v+nDOFWicM4wziFK9S/ajF2lc0N2Rg9p6Y35uMoZI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5f326e2a403e1cebaec378e72ceaf5725983376d",
+        "rev": "3bacde6273b09a21a8ccfba15586fb165078fb62",
         "type": "github"
       },
       "original": {
@@ -181,11 +165,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1665732960,
-        "narHash": "sha256-WBZ+uSHKFyjvd0w4inbm0cNExYTn8lpYFcHEes8tmec=",
+        "lastModified": 1668765800,
+        "narHash": "sha256-rC40+/W6Hio7b/RsY8SvQPKNx4WqNcTgfYv8cUMAvJk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "4428e23312933a196724da2df7ab78eb5e67a88e",
+        "rev": "52b2ac8ae18bbad4374ff0dd5aeee0fdf1aea739",
         "type": "github"
       },
       "original": {
@@ -197,7 +181,6 @@
     },
     "root": {
       "inputs": {
-        "hardware-cfg": "hardware-cfg",
         "home-manager": "home-manager",
         "home-manager-cfg-public": "home-manager-cfg-public",
         "nixpkgs": "nixpkgs_4",
@@ -207,11 +190,11 @@
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1668846798,
-        "narHash": "sha256-+JV5KCGov0h814bUnbiuT6tIsHMzdil2hCvHsGOzJ00=",
+        "lastModified": 1668850616,
+        "narHash": "sha256-yp4yYhOY0HFndPLI2UDkLoNl+WYCB/FHIfEHPbztutg=",
         "ref": "refs/heads/master",
-        "rev": "2c0ee2f5b27f9df6d67c0ce17c803494b92dfe3c",
-        "revCount": 14,
+        "rev": "927b9c70580dbcab21bc96fbcc9859141378b137",
+        "revCount": 15,
         "type": "git",
         "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
       },
@@ -222,11 +205,11 @@
     },
     "utils": {
       "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
         "type": "github"
       },
       "original": {
