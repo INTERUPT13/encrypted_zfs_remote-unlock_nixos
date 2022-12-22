@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "blobs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1604995301,
+        "narHash": "sha256-wcLzgLec6SGJA8fx1OEN1yV/Py5b+U5iyYpksUY/yLw=",
+        "owner": "simple-nixos-mailserver",
+        "repo": "blobs",
+        "rev": "2cccdf1ca48316f2cfd1c9a0017e8de5a7156265",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "simple-nixos-mailserver",
+        "repo": "blobs",
+        "type": "gitlab"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -37,11 +53,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1668788863,
-        "narHash": "sha256-FsdUG+YkRX7JZKZm6T44J2h+0pXB1sWA9AobyiozFK0=",
+        "lastModified": 1671578428,
+        "narHash": "sha256-YmbpBcPaGz9KE2bC4xPvSdgCSMk0BmS/L3ePvy9TR/M=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "948d1f8a5cef55a281d4f5d17f3b79df6c82fce1",
+        "rev": "0f8bf4f92efa3c6168705b49a6788abb3612033a",
         "type": "github"
       },
       "original": {
@@ -60,11 +76,11 @@
         "zsh-colored-man-pages": "zsh-colored-man-pages"
       },
       "locked": {
-        "lastModified": 1667546055,
-        "narHash": "sha256-TeaZAvhbRCvfA1WrbrUI/YMW/s2sB9ZiaFhW51E494k=",
+        "lastModified": 1670932588,
+        "narHash": "sha256-WJnqAaUEcppoafjgNegaI+iybr/U86u7t7YC1+h0gqY=",
         "ref": "refs/heads/master",
-        "rev": "5c429c710a9319d38fbf3ae8575221b3731306df",
-        "revCount": 18,
+        "rev": "651d2adebcfff2eb612b0f33e67202e131a7c44a",
+        "revCount": 24,
         "type": "git",
         "url": "git+ssh://git@github.com/INTERUPT13/nix-home-manager-config-public.git"
       },
@@ -82,16 +98,32 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1662759269,
-        "narHash": "sha256-lt8bAfEZudCQb+MxoNKmenhMTXhu3RCCyLYxU9t5FFk=",
+        "lastModified": 1670513770,
+        "narHash": "sha256-muL74fsbGA8K8WlZSPNWddOiuBnC54kAajncX6nXrh4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "9f7fe353b613d0e45d7a5cdbd1f13c96c15803dd",
+        "rev": "054d9e3187ca00479e8036dc0e92900a384f30fd",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "mobile-nixos": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670131242,
+        "narHash": "sha256-T/o1/3gffr010fsqgNshs1NJJjsnUYvQnUZgm6hilsY=",
+        "owner": "NixOS",
+        "repo": "mobile-nixos",
+        "rev": "5ee45cc1f8e43f4af14ee17ccef9156b0db8cd77",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "mobile-nixos",
         "type": "github"
       }
     },
@@ -102,11 +134,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1649318490,
-        "narHash": "sha256-t+g7N8RAC5XSk8bFrertfIZ2/5ASzOvcUpN5uLZc2DQ=",
-        "ref": "master",
-        "rev": "cb49f929ab727ec858670ee6bfc81c49ff5e56b8",
-        "revCount": 202,
+        "lastModified": 1667311710,
+        "narHash": "sha256-vGiA5UwWFfprgdhFVNZjYrE5AhQE6jG7Ryyry0+gITY=",
+        "ref": "refs/heads/master",
+        "rev": "fb698be995b5dcc6aeeeb94465de1923688503ec",
+        "revCount": 222,
         "type": "git",
         "url": "https://github.com/serokell/nixfmt"
       },
@@ -115,13 +147,29 @@
         "url": "https://github.com/serokell/nixfmt"
       }
     },
+    "nixos-mailserver-configs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668872361,
+        "narHash": "sha256-IY1uew/eWlCRv314y28Lj/zCakCFfwSmcuktKq8G80Y=",
+        "ref": "refs/heads/master",
+        "rev": "9c98eb8714bec88dbdfa3f39049e7f48d9be873c",
+        "revCount": 2,
+        "type": "git",
+        "url": "git+ssh://git@github.com/INTERUPT13/nixos-mailserver-configs.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/INTERUPT13/nixos-mailserver-configs.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1667629849,
-        "narHash": "sha256-P+v+nDOFWicM4wziFK9S/ajF2lc0N2Rg9p6Y35uMoZI=",
+        "lastModified": 1671200928,
+        "narHash": "sha256-mZfzDyzojwj6I0wyooIjGIn81WtGVnx6+avU5Wv+VKU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3bacde6273b09a21a8ccfba15586fb165078fb62",
+        "rev": "757b82211463dd5ba1475b6851d3731dfe14d377",
         "type": "github"
       },
       "original": {
@@ -129,6 +177,21 @@
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
+      }
+    },
+    "nixpkgs-22_11": {
+      "locked": {
+        "lastModified": 1669558522,
+        "narHash": "sha256-yqxn+wOiPqe6cxzOo4leeJOp1bXE/fjPEi/3F/bBHv8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ce5fe99df1f15a09a91a86be9738d68fadfbad82",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-22.11",
+        "type": "indirect"
       }
     },
     "nixpkgs_2": {
@@ -149,11 +212,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1662821606,
-        "narHash": "sha256-Z9z9iSH+tgJ0iyRcBfEQRwELgjnhpVXsktiWiFe3SuY=",
+        "lastModified": 1670751203,
+        "narHash": "sha256-XdoH1v3shKDGlrwjgrNX/EN8s3c+kQV7xY6cLCE8vcI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "93a0067a9c85c17764f7755947e6ecf52dc47d8a",
+        "rev": "64e0bf055f9d25928c31fb12924e59ff8ce71e60",
         "type": "github"
       },
       "original": {
@@ -165,17 +228,48 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1668765800,
-        "narHash": "sha256-rC40+/W6Hio7b/RsY8SvQPKNx4WqNcTgfYv8cUMAvJk=",
+        "lastModified": 1671741567,
+        "narHash": "sha256-SSmlJkiSOkrM0CW6pASLAMs1+3TaAogmw0hwch+VvhQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "52b2ac8ae18bbad4374ff0dd5aeee0fdf1aea739",
+        "rev": "7ed9bbb62d807957938a46a136113cf18b7552fe",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-unstable",
+        "ref": "master",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1669542132,
+        "narHash": "sha256-DRlg++NJAwPh8io3ExBJdNW7Djs3plVI5jgYQ+iXAZQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a115bb9bd56831941be3776c8a94005867f316a7",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nur": {
+      "locked": {
+        "lastModified": 1670438932,
+        "narHash": "sha256-8NtGqV3T3yTgrRsuTygpd5A8afX2sRRBuMczkN87HbE=",
+        "owner": "INTERUPT13",
+        "repo": "NUR",
+        "rev": "99bb9eb0749577b37d784826317f5cb9726e40d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "INTERUPT13",
+        "ref": "INTERUPT13-patch-1",
+        "repo": "NUR",
         "type": "github"
       }
     },
@@ -183,24 +277,47 @@
       "inputs": {
         "home-manager": "home-manager",
         "home-manager-cfg-public": "home-manager-cfg-public",
+        "mobile-nixos": "mobile-nixos",
+        "nixos-mailserver-configs": "nixos-mailserver-configs",
         "nixpkgs": "nixpkgs_4",
-        "security-cfg": "security-cfg"
+        "nur": "nur",
+        "security-cfg": "security-cfg",
+        "simpleNixosMailserver": "simpleNixosMailserver"
       }
     },
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1668850616,
-        "narHash": "sha256-yp4yYhOY0HFndPLI2UDkLoNl+WYCB/FHIfEHPbztutg=",
-        "ref": "refs/heads/master",
-        "rev": "927b9c70580dbcab21bc96fbcc9859141378b137",
-        "revCount": 15,
-        "type": "git",
-        "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
+        "lastModified": 1671742168,
+        "narHash": "sha256-GBcVp6+OjbsTrFRoEHzq8nGSVy19wyb270L7QJMgx9I=",
+        "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/INTERUPT13/encrypted_zfs_remote-unlock_nixos_security.git"
+        "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security",
+        "type": "path"
+      }
+    },
+    "simpleNixosMailserver": {
+      "inputs": {
+        "blobs": "blobs",
+        "nixpkgs": "nixpkgs_5",
+        "nixpkgs-22_11": "nixpkgs-22_11",
+        "utils": "utils_3"
+      },
+      "locked": {
+        "lastModified": 1671659164,
+        "narHash": "sha256-DbpT+v1POwFOInbrDL+vMbYV3mVbTkMxmJ5j50QnOcA=",
+        "owner": "simple-nixos-mailserver",
+        "repo": "nixos-mailserver",
+        "rev": "bc667fb6afc45f6cc2d118ab77658faf2227cffd",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "simple-nixos-mailserver",
+        "ref": "master",
+        "repo": "nixos-mailserver",
+        "type": "gitlab"
       }
     },
     "utils": {
@@ -220,11 +337,26 @@
     },
     "utils_2": {
       "locked": {
-        "lastModified": 1653893745,
-        "narHash": "sha256-0jntwV3Z8//YwuOjzhV2sgJJPt+HY6KhU7VZUL0fKZQ=",
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "1ed9fb1935d260de5fe1c2f7ee0ebaae17ed2fa1",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "utils_3": {
+      "locked": {
+        "lastModified": 1605370193,
+        "narHash": "sha256-YyMTf3URDL/otKdKgtoMChu4vfVL3vCMkRqpGifhUn0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5021eac20303a61fafe17224c087f5519baed54d",
         "type": "github"
       },
       "original": {
@@ -238,7 +370,7 @@
       "locked": {
         "lastModified": 1622844304,
         "narHash": "sha256-KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=",
-        "ref": "master",
+        "ref": "refs/heads/master",
         "rev": "a411ef3e0992d4839f0732ebeb9823024afaaaa8",
         "revCount": 530,
         "type": "git",
@@ -254,7 +386,7 @@
       "locked": {
         "lastModified": 1656101815,
         "narHash": "sha256-BaYYzl6JArfPWASJtzk44scGejwgyT5+W94ugVDCV3I=",
-        "ref": "master",
+        "ref": "refs/heads/master",
         "rev": "7fbd15150fe0fc84a34b6aa9e31c5589de3c9ffc",
         "revCount": 34,
         "type": "git",
@@ -270,7 +402,7 @@
       "locked": {
         "lastModified": 1554205411,
         "narHash": "sha256-087bNmB5gDUKoSriHIjXOVZiUG5+Dy9qv3D69E8GBhs=",
-        "ref": "master",
+        "ref": "refs/heads/master",
         "rev": "57bdda68e52a09075352b18fa3ca21abd31df4cb",
         "revCount": 9,
         "type": "git",
