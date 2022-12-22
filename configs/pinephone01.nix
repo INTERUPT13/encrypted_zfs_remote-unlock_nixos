@@ -1,4 +1,4 @@
-{nixpkgs, mobile-nixos, nur, home-manager, home-manager-cfg-public, ... }:
+{nixpkgs, mobile-nixos, nur, home-manager, home-manager-cfg-public, security-cfg, ... }:
     let
       system = "aarch64-linux";
       defaultUserName = "flandre";
@@ -11,9 +11,9 @@
             device = "pine64-pinephone";
           })
 
-          (import ./hardware-configuration.nix)
+          (import "${security-cfg}/hw/hardware-configuration-hetzner_01.nix")
 
-          (import ./sxmo-nixos/modules/sxmo.nix)
+          #(import ./sxmo-nixos/modules/sxmo.nix)
 
           home-manager.nixosModules.home-manager
           ({
@@ -151,6 +151,4 @@
             #services.xserver.displayManager.defaultSession= "none+sxmo";
           })
         ];
-      };
-    };
-}
+    }
