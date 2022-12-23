@@ -26,8 +26,7 @@
     };
 
     home-manager-cfg-public = {
-      url = "git+ssh://git@github.com/INTERUPT13/nix-home-manager-config-public.git";
-      type = "git";
+      url = "path:/etc/nixos/nix-home-manager-config-public";
       #ref = "testing";
     };
 

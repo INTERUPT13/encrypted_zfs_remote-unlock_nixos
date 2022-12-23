@@ -1,5 +1,7 @@
-{ name, pkgs, ... }: {
-  users.users.flandre = {
+
+{name}: 
+{pkgs, ... }: {
+  users.users."${name}" = {
     inherit name;
     isNormalUser = true;
     shell = pkgs.zsh;
