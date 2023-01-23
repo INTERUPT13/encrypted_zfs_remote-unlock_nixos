@@ -11,7 +11,7 @@
             device = "pine64-pinephone";
           })
 
-          (import "${security-cfg}/hw/hardware-configuration-hetzner_01.nix")
+          (import "${security-cfg}/hw/hardware-configuration-pinephone01.nix")
 
           #(import ./sxmo-nixos/modules/sxmo.nix)
 
@@ -24,10 +24,10 @@
 
           ({ config, ... }: {
 
-          virtualisation = {
-            waydroid.enable = true;
-            lxd.enable = true;
-          };
+          #virtualisation = {
+          #  waydroid.enable = true;
+          #  lxd.enable = true;
+          #};
 
             programs.calls.enable = true;
 
@@ -100,7 +100,8 @@
             users.users.${defaultUserName} = {
               isNormalUser = true;
               description = "";
-              #packages = [ pkgs.tdesktop pkgs.xterm ];
+              # TODO  ... home manager ...
+              packages = [ pkgs.megapixels ];
               hashedPassword =
                 "$6$culRuFpx6eG5G30k$1FmUVmGqsbzDJwROHwatfWEh/em8NLeJDYGve9v82hhRksgOeo.hHsDoPLJWkUuLglndkBHdCcovmspKK5ppJ0";
               extraGroups = [

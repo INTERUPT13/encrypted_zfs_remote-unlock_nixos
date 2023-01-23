@@ -35,10 +35,15 @@
       flake = false;
     };
 
+    sxmo-nix = {
+      url = "github:wentam/sxmo-nix";
+      flake = false;
+    };
+
     nur = { url = "github:INTERUPT13/NUR?ref=INTERUPT13-patch-1"; };
 
   };
-  outputs = { self, nixpkgs, security-cfg, home-manager,  home-manager-cfg-public, simpleNixosMailserver, nixos-mailserver-configs, nur, mobile-nixos }@attrs: {
+  outputs = { self, nixpkgs, security-cfg, home-manager,  home-manager-cfg-public, simpleNixosMailserver, nixos-mailserver-configs, nur, mobile-nixos, sxmo-nix }@attrs: {
     nixosConfigurations.tower01 = nixpkgs.lib.nixosSystem (import ./configs/tower01.nix attrs);
     nixosConfigurations.hetzner_mailserver01 = nixpkgs.lib.nixosSystem (import ./configs/hetzner_mailserver01.nix attrs);
     nixosConfigurations.pinephone01= nixpkgs.lib.nixosSystem (import ./configs/pinephone01.nix attrs);
