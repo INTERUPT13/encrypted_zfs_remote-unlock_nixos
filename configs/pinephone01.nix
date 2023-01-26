@@ -1,4 +1,4 @@
-{nixpkgs, mobile-nixos, nur, home-manager, home-manager-cfg-public, security-cfg, ... }:
+{nixpkgs, mobile-nixos, nur, home-manager, home-manager-cfg-public, security-cfg, sxmo-nix, ... }:
     let
       system = "aarch64-linux";
       defaultUserName = "flandre";
@@ -13,7 +13,6 @@
 
           (import "${security-cfg}/hw/hardware-configuration-pinephone01.nix")
 
-          #(import ./sxmo-nixos/modules/sxmo.nix)
 
           home-manager.nixosModules.home-manager
           ({
@@ -21,6 +20,9 @@
               home-manager-cfg-public.pinephone_cfg;
             home-manager.users.root = home-manager-cfg-public.pinephone_cfg;
           })
+
+          "${sxmo-nix}/modules/tinydm"
+          "${sxmo-nix}/modules/sxmo"
 
           ({ config, ... }: {
 
@@ -111,6 +113,7 @@
                 "video"
                 "audio"
                 "wheel"
+                "input"
               ];
               shell = pkgs.zsh; # since homemanager config uses it
             };
@@ -119,10 +122,10 @@
 
             # for jellyfin as for now
             services.flatpak.enable = true;
-            #dg.portal = {
-            #	enable = true;
-            #  extraPortals = [pkgs.xdg-desktop-portal-gtk];
-            #};
+            xdg.portal = {
+            	enable = true;
+              extraPortals = [pkgs.xdg-desktop-portal-gtk];
+            };
 
             services.logind = {
               extraConfig = "  HandlePowerKey=lock\n  HandleLidSwitch=lock\n";
@@ -132,11 +135,24 @@
               enable = true;
               driSupport = true;
             };
-            services.xserver.desktopManager.phosh = {
+            #services.xserver.desktopManager.phosh = {
+            #  enable = true;
+            #  user = "flandre";
+            #  group = "users";
+            #  phocConfig.xwayland = "immediate";
+            #};
+
+            
+            services.xserver = {
               enable = true;
-              user = "flandre";
-              group = "users";
-              phocConfig.xwayland = "immediate";
+              desktopManager.sxmo.enable = true;
+
+              displayManager = {
+                tinydm.enable = true;
+                autoLogin.enable = true;
+                autoLogin.user = "flandre";
+                defaultSession = "swmo";
+              };
             };
 
             # Enable xserver
