@@ -65,6 +65,7 @@
       (forEach (domains ++ [fqdn]) (domain: {
         name = "acmechallenges.${domain}";
         value = {
+          serverName = domain; # otherwise it would use acmechallenges.${domain} which would later fail in the dns part
           locations."/.well-known/acme-challenge" = {
             root = "/var/lib/acme/.challenges";
           };
@@ -80,7 +81,7 @@
   # like in the webserver configs already? I mean if the info mismatches
   # it will fail and if not it wont
   security.acme.certs = listToAttrs       #TODO
-    (forEach (domains ++ [fqdn] ++ [ webmail_domain ] ) (domain: {
+    (forEach (domains ++ [fqdn]) (domain: {
       name = "${domain}";
       value = {
         webroot = "/var/lib/acme/.challenges";

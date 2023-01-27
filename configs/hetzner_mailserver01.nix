@@ -14,15 +14,14 @@
         modules = [
           pub_cfg
 
+          ./../cachix.nix
+
           # bootloader specs/mechanism
           #(import ./bootloader/grub2_efi.nix)
           (import ./../bootloader/systemdboot_bios.nix)
 
           (import ./../zfs/scrubbing.nix)
-          (import ./../users/desktop_user.nix {
-            name = "flandre";
-            pkgs = (import nixpkgs { system = "x86_64-linux"; });
-          })
+          (import ./../users/desktop_user.nix {name = "flandre"; })
 
           #home-manager.nixosModules.home-manager (home-manager-cfg-public.cfg)
           home-manager.nixosModules.home-manager

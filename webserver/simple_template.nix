@@ -19,16 +19,4 @@
         };
       }));
   };
-
-
-
-
-
-            #security.acme.certs = {
-            #  "..." = {
-            #    webroot = "/var/lib/acme/.challenges";
-            #    email = "....";
-            #    group = "nginx";
-            #  };
-            #};
 }
