@@ -160,8 +160,8 @@
         "zsh-colored-man-pages": "zsh-colored-man-pages"
       },
       "locked": {
-        "lastModified": 1674835082,
-        "narHash": "sha256-No9jU23UdCaUWNWKJhB8tztcw7+GtTKj7pYx8CQirFQ=",
+        "lastModified": 1674865128,
+        "narHash": "sha256-HVLL0q1ba2E6iWW6F10rW/LMlorfAdBMKW65u/JxL+M=",
         "path": "/etc/nixos/nix-home-manager-config-public",
         "type": "path"
       },
@@ -291,6 +291,22 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1674641431,
+        "narHash": "sha256-qfo19qVZBP4qn5M5gXc/h1MDgAtPA5VxJm9s8RUAkVk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9b97ad7b4330aacda9b2343396eb3df8a853b4fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1674641431,
@@ -341,11 +357,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1674819233,
-        "narHash": "sha256-0WQNIpuwyBA/ekWKbaB08bId/U8aqIG/Y8voLA4awsY=",
+        "lastModified": 1674864544,
+        "narHash": "sha256-JpxzpAFWmSsqzqjFOKQdS2Zkg4MnGaNQoKztClIoJgo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d79cb534d8935d906883b93471c70509a74f90ac",
+        "rev": "35b2d417c3e02178a52f9c7bad26ca7f51062533",
         "type": "github"
       },
       "original": {
@@ -394,6 +410,7 @@
         "mobile-nixos": "mobile-nixos",
         "nixos-mailserver-configs": "nixos-mailserver-configs",
         "nixpkgs": "nixpkgs_5",
+        "nixpkgs-unstable": "nixpkgs-unstable",
         "nur": "nur",
         "security-cfg": "security-cfg",
         "simpleNixosMailserver": "simpleNixosMailserver",
@@ -420,8 +437,8 @@
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1674820170,
-        "narHash": "sha256-INALuknOturiuyRiRIzHkwX29tyC4FBjr3o9va1Hrhc=",
+        "lastModified": 1674826011,
+        "narHash": "sha256-N5CeQqQ530x3VjA4zMPZ9YePBsLt7HDZgkNbDUw9/CI=",
         "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security",
         "type": "path"
       },

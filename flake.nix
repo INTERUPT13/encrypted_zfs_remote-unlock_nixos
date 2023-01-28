@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/master";
-    nixpkgs_unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     security-cfg = { 
       url = "path:/etc/nixos/encrypted_zfs_remote-unlock_nixos_security";
       flake = false;
@@ -46,7 +46,7 @@
     cringe.url = "path:/etc/nixos/encrypted_zfs_remote-unlock_nixos_security/cringe";
 
   };
-  outputs = { self, nixpkgs, nixos-unstable, security-cfg, home-manager,  home-manager-cfg-public, simpleNixosMailserver, nixos-mailserver-configs, nur, mobile-nixos, sxmo-nix, cringe}@attrs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, security-cfg, home-manager,  home-manager-cfg-public, simpleNixosMailserver, nixos-mailserver-configs, nur, mobile-nixos, sxmo-nix, cringe}@attrs: {
     nixosConfigurations.tower01 = nixpkgs.lib.nixosSystem (import ./configs/tower01.nix attrs);
     nixosConfigurations.hetzner_mailserver01 = nixpkgs.lib.nixosSystem (import ./configs/hetzner_mailserver01.nix attrs);
     nixosConfigurations.pinephone01= nixpkgs.lib.nixosSystem (import ./configs/pinephone01.nix attrs);
