@@ -1,4 +1,4 @@
-{ self, nixpkgs, security-cfg, home-manager, home-manager-cfg-public, nixos-mailserver-configs, simpleNixosMailserver, ...}@attrs:
+{ self, nixpkgs, security-cfg, home-manager, home-manager-cfg-public, nixos-mailserver-configs, simpleNixosMailserver, cringe, ...}@attrs:
     with nixpkgs;
     let
       # todo splitin modules
@@ -16,18 +16,21 @@
 
           ./../cachix.nix
 
+          ({...}: (import ./../remote_builders/nixbuild.net.nix {}).x86_config)
+          ({...}: (import ./../remote_builders/nixbuild.net.nix {}).aarch_config)
+
           # bootloader specs/mechanism
           #(import ./bootloader/grub2_efi.nix)
-          (import ./../bootloader/systemdboot_bios.nix)
+          (import ./../bootloader/systemdboot_bios.nix {theme=cringe._1;})
 
           (import ./../zfs/scrubbing.nix)
-          (import ./../users/desktop_user.nix {name = "flandre"; })
+          (import ./../users/desktop_user.nix {name = "flandre"; extraGroups = ["wheel"]; })
 
-          #home-manager.nixosModules.home-manager (home-manager-cfg-public.cfg)
+
           home-manager.nixosModules.home-manager
           ({
-            home-manager.users.flandre = home-manager-cfg-public.default_cfg;
-            home-manager.users.root = home-manager-cfg-public.default_cfg;
+            home-manager.users.flandre = home-manager-cfg-public.server_cfg pkgs;
+            home-manager.users.root = home-manager-cfg-public.server_cfg pkgs;
           })
 
           # EXAMPLE FOUND IN ./security.nix.example

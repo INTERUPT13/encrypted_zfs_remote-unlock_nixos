@@ -1,8 +1,8 @@
-{nixpkgs, mobile-nixos, nur, home-manager, home-manager-cfg-public, security-cfg, sxmo-nix, ... }:
+{nixpkgs, nixpkgs-unstable, mobile-nixos, nur, home-manager, home-manager-cfg-public, security-cfg, sxmo-nix, ... }:
     let
       system = "aarch64-linux";
       defaultUserName = "flandre";
-      pkgs = import nixpkgs { system = "${system}"; };
+      pkgs = import nixpkgs-unstable { system = "${system}"; };
     in with nixpkgs; {
         inherit system;
 
@@ -17,8 +17,8 @@
           home-manager.nixosModules.home-manager
           ({
             home-manager.users."${defaultUserName}" =
-              home-manager-cfg-public.pinephone_cfg;
-            home-manager.users.root = home-manager-cfg-public.pinephone_cfg;
+              home-manager-cfg-public.pinephone_cfg pkgs;
+            home-manager.users.root = home-manager-cfg-public.pinephone_cfg pkgs;
           })
 
           "${sxmo-nix}/modules/tinydm"

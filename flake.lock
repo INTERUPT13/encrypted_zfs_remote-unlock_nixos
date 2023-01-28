@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "GRUB-Theme-Ani_u_must_feel_cool_for_looking_in_my_lockfile_for_this": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673990399,
+        "narHash": "sha256-37rYapoE06QXuYe/GkL/YvS3HypT1R2uHS/aeYNMVJM=",
+        "owner": "13atm01",
+        "repo": "GRUB-Theme",
+        "rev": "74da436036891a909cafe93c9f227c0e1404aa01",
+        "type": "github"
+      },
+      "original": {
+        "owner": "13atm01",
+        "repo": "GRUB-Theme",
+        "type": "github"
+      }
+    },
     "blobs": {
       "flake": false,
       "locked": {
@@ -14,6 +30,21 @@
         "owner": "simple-nixos-mailserver",
         "repo": "blobs",
         "type": "gitlab"
+      }
+    },
+    "cringe": {
+      "inputs": {
+        "GRUB-Theme-Ani_u_must_feel_cool_for_looking_in_my_lockfile_for_this": "GRUB-Theme-Ani_u_must_feel_cool_for_looking_in_my_lockfile_for_this"
+      },
+      "locked": {
+        "lastModified": 1674826011,
+        "narHash": "sha256-T3f/lTB8CQVK4MSAipQBQGKDy1C4qmj6HG6ylLa6Cao=",
+        "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security/cringe",
+        "type": "path"
+      },
+      "original": {
+        "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security/cringe",
+        "type": "path"
       }
     },
     "fenix": {
@@ -129,8 +160,8 @@
         "zsh-colored-man-pages": "zsh-colored-man-pages"
       },
       "locked": {
-        "lastModified": 1674807162,
-        "narHash": "sha256-hTEYHutQXgtkdQtxKN8n/Dif8G7nVEQdyjSB3dsfUo8=",
+        "lastModified": 1674835082,
+        "narHash": "sha256-No9jU23UdCaUWNWKJhB8tztcw7+GtTKj7pYx8CQirFQ=",
         "path": "/etc/nixos/nix-home-manager-config-public",
         "type": "path"
       },
@@ -310,11 +341,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1674807197,
-        "narHash": "sha256-/GwY9Oz0E5CiQl35JiPIdNR/YwpplGGner2ic0HCAiM=",
+        "lastModified": 1674819233,
+        "narHash": "sha256-0WQNIpuwyBA/ekWKbaB08bId/U8aqIG/Y8voLA4awsY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "651a443dcb37061441f138570f21bcbf03f09c88",
+        "rev": "d79cb534d8935d906883b93471c70509a74f90ac",
         "type": "github"
       },
       "original": {
@@ -357,6 +388,7 @@
     },
     "root": {
       "inputs": {
+        "cringe": "cringe",
         "home-manager": "home-manager",
         "home-manager-cfg-public": "home-manager-cfg-public",
         "mobile-nixos": "mobile-nixos",
@@ -388,8 +420,8 @@
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1674805672,
-        "narHash": "sha256-TliVrCXJvKVPE2uvI/XDUp8NQU+09mSkdbGr2s5Bxbw=",
+        "lastModified": 1674820170,
+        "narHash": "sha256-INALuknOturiuyRiRIzHkwX29tyC4FBjr3o9va1Hrhc=",
         "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security",
         "type": "path"
       },
