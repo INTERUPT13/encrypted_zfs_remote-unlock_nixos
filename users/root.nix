@@ -1,5 +1,1 @@
-{pkgs, ... }: {
-  users.users.root = {
-    shell = pkgs.zsh;
-  };
-}
+{ pkgs, ... }: { users.users.root = { shell = pkgs.zsh; }; }

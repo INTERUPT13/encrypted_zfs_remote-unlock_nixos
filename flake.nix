@@ -1,29 +1,26 @@
 {
-  description = "encrypted ZFS+remote unlock NixOS flake config for one of my servers";
+  description =
+    "encrypted ZFS+remote unlock NixOS flake config for one of my servers";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/master";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    security-cfg = { 
+    security-cfg = {
       url = "path:/etc/nixos/encrypted_zfs_remote-unlock_nixos_security";
       flake = false;
       #ref = "uefi";
     };
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-    };
+    home-manager = { url = "github:nix-community/home-manager"; };
 
     nixos-mailserver-configs = {
-      url =
-        "git+ssh://git@github.com/INTERUPT13/nixos-mailserver-configs.git";
+      url = "git+ssh://git@github.com/INTERUPT13/nixos-mailserver-configs.git";
       flake = false;
       type = "git";
     };
 
     simpleNixosMailserver = {
-      url = 
-        "gitlab:simple-nixos-mailserver/nixos-mailserver?ref=master";
+      url = "gitlab:simple-nixos-mailserver/nixos-mailserver?ref=master";
     };
 
     home-manager-cfg-public = {
@@ -43,12 +40,18 @@
 
     nur = { url = "github:INTERUPT13/NUR?ref=INTERUPT13-patch-1"; };
 
-    cringe.url = "path:/etc/nixos/encrypted_zfs_remote-unlock_nixos_security/cringe";
+    cringe.url =
+      "path:/etc/nixos/encrypted_zfs_remote-unlock_nixos_security/cringe";
 
   };
-  outputs = { self, nixpkgs, nixpkgs-unstable, security-cfg, home-manager,  home-manager-cfg-public, simpleNixosMailserver, nixos-mailserver-configs, nur, mobile-nixos, sxmo-nix, cringe}@attrs: {
-    nixosConfigurations.tower01 = nixpkgs.lib.nixosSystem (import ./configs/tower01.nix attrs);
-    nixosConfigurations.hetzner_mailserver01 = nixpkgs.lib.nixosSystem (import ./configs/hetzner_mailserver01.nix attrs);
-    nixosConfigurations.pinephone01= nixpkgs.lib.nixosSystem (import ./configs/pinephone01.nix attrs);
-  };
+  outputs = { self, nixpkgs, nixpkgs-unstable, security-cfg, home-manager
+    , home-manager-cfg-public, simpleNixosMailserver, nixos-mailserver-configs
+    , nur, mobile-nixos, sxmo-nix, cringe }@attrs: {
+      nixosConfigurations.tower01 =
+        nixpkgs.lib.nixosSystem (import ./configs/tower01.nix attrs);
+      nixosConfigurations.hetzner_mailserver01 = nixpkgs.lib.nixosSystem
+        (import ./configs/hetzner_mailserver01.nix attrs);
+      nixosConfigurations.pinephone01 =
+        nixpkgs.lib.nixosSystem (import ./configs/pinephone01.nix attrs);
+    };
 }

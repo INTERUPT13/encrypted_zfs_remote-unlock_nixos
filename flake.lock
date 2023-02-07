@@ -437,8 +437,8 @@
     "security-cfg": {
       "flake": false,
       "locked": {
-        "lastModified": 1674826011,
-        "narHash": "sha256-N5CeQqQ530x3VjA4zMPZ9YePBsLt7HDZgkNbDUw9/CI=",
+        "lastModified": 1675700467,
+        "narHash": "sha256-At99kvRk93DIOebmSDlg3PYBiRf6Va6HihWhS9qnTv0=",
         "path": "/etc/nixos/encrypted_zfs_remote-unlock_nixos_security",
         "type": "path"
       },

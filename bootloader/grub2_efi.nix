@@ -1,4 +1,5 @@
-{pkgs, config, ...}: with pkgs; {
+{ pkgs, config, ... }:
+with pkgs; {
 
   boot.loader = {
     grub.enable = true;

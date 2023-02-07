@@ -1,6 +1,5 @@
-
-{name, extraGroups ? []}: 
-{pkgs, ... }: {
+{ name, extraGroups ? [ ] }:
+{ pkgs, ... }: {
   users.users."${name}" = {
     inherit name;
     inherit extraGroups;
